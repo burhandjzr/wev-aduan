@@ -7,13 +7,10 @@ body {
 
 /* NAVBAR */
 .navbar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  background: #0A2540;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
+  transition: top 0.3s;
 }
 
 .navbar ul {
