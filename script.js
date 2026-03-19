@@ -1,3 +1,8 @@
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+
 // COUNTER
 function animateCounter(id, target) {
   let count = 0;
