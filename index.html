@@ -3,142 +3,414 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Justice in Motion</title>
-
+  <title>Justice in Motion — Edukasi Hukum Digital</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-  <h2 class="logo">Justice in Motion</h2>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">
+      <img src="logo.png" alt="Justice in Motion" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+      <span class="logo-text" style="display:none">Justice in Motion</span>
+    </a>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
 
-  <ul id="menu">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#tentang">Tentang</a></li>
-    <li><a href="#grooming">Grooming</a></li>
-    <li><a href="#data">Data</a></li>
-    <li><a href="#dampak">Dampak</a></li>
-    <li><a href="#pencegahan">Pencegahan</a></li>
-    <li><a href="#hukum">Hukum</a></li>
-    <li><a href="#kontak">Kontak</a></li>
-  </ul>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#definisi" class="nav-link" onclick="closeMenu()">Definisi</a></li>
+      <li><a href="#analisis" class="nav-link" onclick="closeMenu()">Analisis Hukum</a></li>
+      <li><a href="#pencegahan" class="nav-link" onclick="closeMenu()">Pencegahan</a></li>
+      <li><a href="#resources" class="nav-link" onclick="closeMenu()">Resources</a></li>
+      <li><a href="#about" class="nav-link" onclick="closeMenu()">About Us</a></li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <h1>Lindungi Anak dari Cyber Grooming</h1>
-  <p>Kejahatan digital yang sering tidak disadari namun berdampak besar</p>
-  <a href="#kontak" class="btn">Butuh Bantuan</a>
-</section>
-
-<!-- TENTANG -->
-<section id="tentang">
-  <h2>Tentang Masalah</h2>
-  <p>
-    Child cyber grooming adalah bentuk pelecehan seksual berbasis digital 
-    yang dilakukan dengan cara membangun hubungan dan memanipulasi anak.
-  </p>
-
-  <div class="cards">
-    <div class="card">Manipulasi digital terhadap anak</div>
-    <div class="card">Korban sering tidak sadar</div>
-    <div class="card">Terjadi di media sosial & game</div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-badge">Justice in Motion</span>
+    <h1 class="hero-title">
+      Analisis Hukum<br>
+      <span class="accent">Presisi & Sistematis</span>
+    </h1>
+    <p class="hero-desc">
+      Justice In Motion menyajikan edukasi hukum berbasis regulasi, khususnya mengenai child grooming dan perlindungan anak di era digital Indonesia.
+    </p>
+    <div class="hero-cta">
+      <a href="#definisi" class="btn-primary">Mulai Baca</a>
+      <a href="#resources" class="btn-secondary">Laporkan Kasus</a>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- GROOMING -->
-<section id="grooming">
-  <h2>Proses Cyber Grooming</h2>
-
-  <div class="timeline">
-    <div class="step">1. Perkenalan</div>
-    <div class="step">2. Pendekatan</div>
-    <div class="step">3. Manipulasi</div>
-    <div class="step">4. Eksploitasi</div>
-  </div>
-</section>
-
-<!-- DATA -->
-<section id="data">
-  <h2>Data Kasus</h2>
-
-  <div class="cards">
-    <div class="card">
-      <div class="counter" id="c1">0</div>
-      <p>Kasus (2015)</p>
-    </div>
-    <div class="card">
-      <div class="counter" id="c2">0</div>
-      <p>Kasus (2020)</p>
-    </div>
-    <div class="card">
-      <div class="counter" id="c3">0</div>
-      <p>Kasus (2021-2023)</p>
+<!-- HIGHLIGHT SECTION -->
+<section class="highlight-bar">
+  <div class="container">
+    <div class="highlight-grid">
+      <div class="highlight-item">
+        <i class="fas fa-shield-halved"></i>
+        <span>Perlindungan Anak</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-scale-balanced"></i>
+        <span>Analisis Hukum</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-graduation-cap"></i>
+        <span>Literasi Digital</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-file-shield"></i>
+        <span>Regulasi Indonesia</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- DAMPAK -->
-<section id="dampak">
-  <h2>Dampak terhadap Anak</h2>
+<!-- DEFINISI -->
+<section id="definisi" class="section-content">
+  <div class="container">
+    <div class="section-label">01 — Definisi</div>
+    <h2 class="section-title">Apa itu <span class="accent">Child Grooming?</span></h2>
 
-  <div class="cards">
-    <div class="card">💔 Trauma</div>
-    <div class="card">😟 Ketakutan</div>
-    <div class="card">🧠 Gangguan mental</div>
+    <div class="definition-block">
+      <p class="definition-text">
+        Child Grooming adalah proses di mana seorang individu dewasa membangun hubungan kepercayaan, kedekatan emosional, dan kontrol psikologis terhadap anak dengan tujuan eksploitasi seksual.
+      </p>
+      <p class="sub-text">
+        Fenomena ini berkembang pesat seiring dengan meningkatnya penggunaan media digital, yang memungkinkan interaksi tanpa batas antara pelaku dan korban.
+      </p>
+    </div>
+
+    <div class="why-matters">
+      <h3 class="subsection-title">Kenapa Penting Dipahami?</h3>
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fas fa-eye-slash"></i></div>
+          <p>Terjadi secara tersembunyi dan bertahap</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fas fa-question-circle"></i></div>
+          <p>Sulit dikenali oleh korban dan orang tua</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fas fa-triangle-exclamation"></i></div>
+          <p>Merupakan tahap awal dari kejahatan seksual terhadap anak</p>
+        </div>
+        <div class="reason-card">
+          <div class="reason-icon"><i class="fas fa-gavel"></i></div>
+          <p>Memiliki implikasi hukum serius dalam sistem pidana Indonesia</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KARAKTERISTIK -->
+    <div class="karakteristik-block">
+      <h3 class="subsection-title">Karakteristik Child Grooming</h3>
+      <p class="sub-text">Pola manipulatif yang dirancang untuk mengaburkan batas antara interaksi sosial dan eksploitasi.</p>
+
+      <div class="timeline-steps">
+        <div class="timeline-step reveal">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h4>Targeting and Access — Pendekatan Awal</h4>
+            <p>Pelaku secara aktif mencari target yang rentan, seperti anak yang kurang pengawasan atau membutuhkan perhatian emosional. Pendekatan dilakukan melalui media digital dengan identitas yang sering kali disamarkan.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h4>Trust Development — Pembangunan Kepercayaan</h4>
+            <p>Pelaku membangun hubungan melalui komunikasi intensif, empati semu, serta pemberian perhatian yang konsisten. Tujuannya adalah menciptakan rasa aman dan ketergantungan emosional pada korban.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h4>Emotional Dependency — Pembentukan Ketergantungan</h4>
+            <p>Seiring waktu, korban mulai melihat pelaku sebagai figur yang dipercaya. Pelaku kemudian mengurangi peran pihak lain sehingga korban menjadi lebih terisolasi secara sosial.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h4>Desensitization — Normalisasi</h4>
+            <p>Pelaku secara bertahap memperkenalkan topik atau perilaku yang tidak pantas agar terlihat "normal". Proses ini dilakukan secara perlahan untuk menurunkan resistensi korban.</p>
+          </div>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <h4>Control and Exploitation — Eksploitasi</h4>
+            <p>Pada tahap akhir, pelaku mulai melakukan eksploitasi dalam bentuk permintaan konten, interaksi seksual, maupun pertemuan langsung. Kontrol dipertahankan melalui manipulasi, ancaman, atau rasa bersalah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODUS OPERANDI -->
+    <div class="modus-block">
+      <h3 class="subsection-title">Modus Operandi di Ruang Digital</h3>
+      <div class="modus-grid">
+        <div class="modus-item reveal"><i class="fas fa-user-secret"></i><span>Identitas palsu</span></div>
+        <div class="modus-item reveal"><i class="fas fa-heart"></i><span>Pendekatan emosional</span></div>
+        <div class="modus-item reveal"><i class="fas fa-gift"></i><span>Pemberian hadiah</span></div>
+        <div class="modus-item reveal"><i class="fas fa-brain"></i><span>Manipulasi psikologis</span></div>
+        <div class="modus-item reveal"><i class="fas fa-skull-crossbones"></i><span>Ancaman & tekanan</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALISIS HUKUM -->
+<section id="analisis" class="section-dark">
+  <div class="container">
+    <div class="section-label light">02 — Analisis Hukum</div>
+    <h2 class="section-title light">Kerangka <span class="accent">Hukum Positif</span></h2>
+
+    <p class="section-intro light">
+      Istilah <em>child grooming</em> belum dirumuskan secara eksplisit dalam peraturan perundang-undangan Indonesia. Namun secara doktrinal dan normatif, praktik ini dapat dikualifikasikan sebagai <strong>perbuatan persiapan (preparatory conduct)</strong> yang memiliki keterkaitan langsung dengan tindak pidana kekerasan seksual terhadap anak.
+    </p>
+
+    <h3 class="subsection-title light">Dasar Hukum yang Relevan</h3>
+    <div class="law-cards">
+      <div class="law-card reveal">
+        <div class="law-number">UU 12/2022</div>
+        <h4>Tindak Pidana Kekerasan Seksual (TPKS)</h4>
+        <p>Mengatur berbagai bentuk kekerasan seksual dengan pendekatan berbasis perlindungan korban dan relasi kuasa. Manipulasi psikologis dan pembangunan relasi untuk tujuan seksual masuk dalam rangkaian perbuatan yang mengarah pada kekerasan seksual.</p>
+      </div>
+      <div class="law-card reveal">
+        <div class="law-number">UU 35/2014</div>
+        <h4>Perlindungan Anak</h4>
+        <p>Melarang eksploitasi seksual terhadap anak, perbuatan cabul, dan upaya yang mengarah pada pemanfaatan anak untuk kepentingan seksual. Grooming dapat diposisikan sebagai preliminary conduct menuju tindak pidana tersebut.</p>
+      </div>
+      <div class="law-card reveal">
+        <div class="law-number">UU 1/2024</div>
+        <h4>Perubahan UU ITE</h4>
+        <p>Mengatur pemanfaatan sistem elektronik dalam perbuatan melawan hukum, termasuk distribusi konten yang melanggar kesusilaan. Child grooming melalui media digital memperkuat karakter delik sebagai cyber-enabled crime.</p>
+      </div>
+      <div class="law-card reveal">
+        <div class="law-number">UU 1/2023</div>
+        <h4>KUHP Baru</h4>
+        <p>Mengatur tindak pidana kesusilaan dan perbuatan cabul sebagai bagian dari sistem hukum pidana nasional. Menjadi rujukan dalam memahami konstruksi tindak pidana terhadap anak meskipun implementasinya bertahap.</p>
+      </div>
+    </div>
+
+    <!-- ANALISIS UNSUR -->
+    <h3 class="subsection-title light" style="margin-top:60px">Analisis Unsur Tindak Pidana</h3>
+    <div class="elements-grid">
+      <div class="element-block reveal">
+        <div class="element-icon"><i class="fas fa-hand"></i></div>
+        <h4>Actus Reus — Perbuatan</h4>
+        <ul>
+          <li>Komunikasi intensif dengan anak</li>
+          <li>Manipulasi emosional dan psikologis</li>
+          <li>Upaya membangun relasi untuk tujuan eksploitasi</li>
+        </ul>
+        <p class="element-note">Perbuatan ini, meskipun belum selalu menimbulkan akibat langsung, memiliki keterkaitan erat dengan tindak pidana seksual.</p>
+      </div>
+      <div class="element-block reveal">
+        <div class="element-icon"><i class="fas fa-lightbulb"></i></div>
+        <h4>Mens Rea — Niat</h4>
+        <ul>
+          <li>Adanya maksud untuk melakukan eksploitasi seksual</li>
+          <li>Kesengajaan dalam membangun kedekatan dengan korban</li>
+        </ul>
+        <p class="element-note">Niat ini umumnya bersifat terselubung dan menjadi tantangan utama dalam pembuktian.</p>
+      </div>
+      <div class="element-block reveal">
+        <div class="element-icon"><i class="fas fa-users"></i></div>
+        <h4>Subjek & Korban</h4>
+        <ul>
+          <li><strong>Pelaku:</strong> Setiap orang yang memiliki kapasitas hukum</li>
+          <li><strong>Korban:</strong> Anak di bawah 18 tahun yang secara hukum berada dalam posisi rentan dan dilindungi secara khusus</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="konstruksi-hukum reveal">
+      <h4><i class="fas fa-balance-scale"></i> Konstruksi Hukum</h4>
+      <p>Dalam perspektif hukum pidana, child grooming <strong>tidak selalu berdiri sebagai delik mandiri</strong>, namun merupakan perbuatan awal yang memiliki hubungan kausal dengan tindak pidana kekerasan seksual terhadap anak. Penegakan hukum dilakukan melalui delik utama serta alat bukti yang menunjukkan proses manipulatif sebelumnya. Tantangan utama terletak pada pembuktian niat (mens rea) dan proses manipulasi yang tidak kasat mata.</p>
+    </div>
   </div>
 </section>
 
 <!-- PENCEGAHAN -->
-<section id="pencegahan">
-  <h2>Pencegahan</h2>
+<section id="pencegahan" class="section-content alt-bg">
+  <div class="container">
+    <div class="section-label">03 — Pencegahan</div>
+    <h2 class="section-title">Langkah <span class="accent">Pencegahan</span></h2>
 
-  <div class="cards">
-    <div class="card">Jangan bagikan data pribadi</div>
-    <div class="card">Pengawasan orang tua</div>
-    <div class="card">Literasi digital</div>
+    <div class="prevention-tabs">
+      <div class="tab-group">
+        <button class="tab-btn active" onclick="showTab('orang-tua')"><i class="fas fa-house-user"></i> Orang Tua</button>
+        <button class="tab-btn" onclick="showTab('anak')"><i class="fas fa-child"></i> Anak</button>
+        <button class="tab-btn" onclick="showTab('masyarakat')"><i class="fas fa-people-group"></i> Masyarakat</button>
+      </div>
+
+      <div class="tab-content active" id="orang-tua">
+        <div class="prevention-list">
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Mengawasi aktivitas digital anak secara aktif dan berkala</p></div>
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Membangun komunikasi terbuka dan tanpa penilaian</p></div>
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Memberikan edukasi tentang risiko digital sejak dini</p></div>
+        </div>
+      </div>
+      <div class="tab-content" id="anak">
+        <div class="prevention-list">
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Tidak mudah percaya pada orang asing di internet</p></div>
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Tidak membagikan informasi pribadi kepada siapapun</p></div>
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Melaporkan interaksi mencurigakan kepada orang tua atau guru</p></div>
+        </div>
+      </div>
+      <div class="tab-content" id="masyarakat">
+        <div class="prevention-list">
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Meningkatkan literasi digital di lingkungan sekitar</p></div>
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Tidak menormalisasi interaksi mencurigakan antara dewasa dan anak</p></div>
+          <div class="prev-item"><i class="fas fa-check-circle"></i><p>Melaporkan potensi kejahatan ke pihak berwenang</p></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- HUKUM -->
-<section id="hukum">
-  <h2>Perlindungan Hukum</h2>
+<!-- RESOURCES & PELAPORAN -->
+<section id="resources" class="section-content">
+  <div class="container">
+    <div class="section-label">04 — Resources</div>
+    <h2 class="section-title">Resources & <span class="accent">Pelaporan</span></h2>
+    <p class="section-intro-light">Pelaporan melalui kanal resmi merupakan langkah penting untuk menghentikan kejahatan, melindungi korban, dan memastikan proses hukum berjalan sesuai ketentuan.</p>
 
-  <p>
-    Belum ada aturan khusus cyber grooming. 
-    Saat ini menggunakan UU Perlindungan Anak, UU ITE, dan UU TPKS.
-  </p>
+    <div class="resources-grid">
+      <div class="resource-card reveal">
+        <div class="resource-icon"><i class="fas fa-shield"></i></div>
+        <h4>Kepolisian RI (Polri)</h4>
+        <p>Melalui Sentra Pelayanan Kepolisian Terpadu (SPKT) di kantor polisi terdekat, atau unit Cyber Crime / Polda setempat.</p>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon"><i class="fas fa-phone"></i></div>
+        <h4>KemenPPPA — SAPA 129</h4>
+        <p>Layanan Sahabat Perempuan dan Anak</p>
+        <div class="resource-contacts">
+          <a href="tel:129" class="contact-link"><i class="fas fa-phone-alt"></i> 129</a>
+          <a href="https://wa.me/6281111129129" target="_blank" class="contact-link wa"><i class="fab fa-whatsapp"></i> 08111-129-129</a>
+        </div>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon"><i class="fas fa-children"></i></div>
+        <h4>KPAI</h4>
+        <p>Komisi Perlindungan Anak Indonesia. Tersedia kanal pengaduan resmi dan pengawasan perlindungan anak.</p>
+        <a href="https://www.kpai.go.id" target="_blank" class="contact-link"><i class="fas fa-external-link-alt"></i> kpai.go.id</a>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon"><i class="fas fa-wifi"></i></div>
+        <h4>Komdigi / Kominfo</h4>
+        <p>Aduan konten digital yang melanggar norma dan kesusilaan.</p>
+        <a href="https://aduankonten.id" target="_blank" class="contact-link"><i class="fas fa-external-link-alt"></i> aduankonten.id</a>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon"><i class="fas fa-building-columns"></i></div>
+        <h4>UPTD PPA Daerah</h4>
+        <p>Unit Pelaksana Teknis Daerah Perlindungan Perempuan dan Anak. Tersedia di tingkat provinsi, kabupaten, dan kota.</p>
+      </div>
+      <div class="resource-card resource-card-wa reveal">
+        <div class="resource-icon wa-icon"><i class="fas fa-scale-balanced"></i></div>
+        <h4>Konsultasi Ahli Hukum</h4>
+        <p>Ceritakan kasusmu secara aman dan rahasia kepada tim ahli hukum kami. Percakapan dijaga kerahasiaannya.</p>
+        <a href="https://wa.me/628988096354?text=Halo%2C%20saya%20ingin%20bercerita" target="_blank" class="btn-wa-card">
+          <i class="fab fa-whatsapp"></i> Kirim Aduan
+        </a>
+        <p class="wa-note"><i class="fas fa-lock"></i> 🔒 Percakapan dijaga kerahasiaannya</p>
+      </div>
+    </div>
 
-  <div class="cards">
-    <div class="card">UU Perlindungan Anak</div>
-    <div class="card">UU ITE</div>
-    <div class="card">UU TPKS</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-dark">
+  <div class="container">
+    <div class="section-label light">05 — About Us</div>
+    <h2 class="section-title light">Tentang <span class="accent">Justice in Motion</span></h2>
+
+    <div class="about-content">
+      <div class="about-text">
+        <p>Justice In Motion adalah <strong>platform edukasi hukum</strong> yang dikembangkan untuk meningkatkan literasi masyarakat terhadap kejahatan digital dan perlindungan anak.</p>
+        <div class="about-focus">
+          <h4>Fokus Utama</h4>
+          <div class="focus-items">
+            <div class="focus-item"><i class="fas fa-check"></i> Edukasi hukum berbasis regulasi</div>
+            <div class="focus-item"><i class="fas fa-check"></i> Analisis normatif yang sistematis</div>
+            <div class="focus-item"><i class="fas fa-check"></i> Peningkatan kesadaran publik</div>
+          </div>
+        </div>
+        <p class="about-note">Platform ini dikembangkan sebagai bagian dari inisiatif akademik dalam bidang hukum dan literasi digital.</p>
+      </div>
+      <div class="about-ethics">
+        <h4><i class="fas fa-lock"></i> Privacy & Ethics</h4>
+        <p>Justice In Motion berkomitmen untuk:</p>
+        <ul>
+          <li>Tidak menampilkan atau menerima konten eksplisit</li>
+          <li>Menjaga sensitivitas terhadap korban</li>
+          <li>Tidak memfasilitasi pelaporan kasus secara langsung</li>
+          <li>Mengedepankan prinsip perlindungan anak dan etika digital</li>
+        </ul>
+        <div class="disclaimer-note">
+          <i class="fas fa-info-circle"></i> Seluruh informasi bersifat edukatif dan bukan nasihat hukum (legal advice). Untuk kebutuhan hukum spesifik, konsultasikan dengan profesional hukum.
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- KONTAK -->
-<section id="kontak" class="kontak">
-  <h2>💬 Butuh Bantuan?</h2>
-  <p>Kami siap mendengarkan cerita kamu secara aman dan rahasia</p>
-
-  <a href="https://wa.me/628988096354?text=Halo%2C%20saya%20ingin%20bercerita" 
-     class="btn-wa" target="_blank">
-    Chat WhatsApp
-  </a>
-
-  <p class="note">🔒 Percakapan dijaga kerahasiaannya</p>
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Tingkatkan Literasi Hukum.<br><span class="accent">Lindungi Anak dari Kejahatan Digital.</span></h2>
+    <div class="cta-actions">
+      <a href="https://instagram.com/JusticeIn_Motion" target="_blank" class="cta-btn instagram">
+        <i class="fab fa-instagram"></i> @JusticeIn_Motion
+      </a>
+      <button onclick="shareWebsite()" class="cta-btn share">
+        <i class="fas fa-share-nodes"></i> Bagikan Informasi
+      </button>
+    </div>
+    <p class="cta-note">Edukasi lingkungan sekitar — karena perlindungan anak adalah tanggung jawab kita bersama.</p>
+  </div>
 </section>
 
-<!-- FLOAT WA -->
-<a href="https://wa.me/628988096354?text=Halo%2C%20saya%20ingin%20bercerita" 
-   class="float-wa">💬</a>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Justice in Motion" class="footer-logo" onerror="this.style.display='none'">
+        <span class="footer-name">Justice in Motion</span>
+      </div>
+      <p class="footer-desc">Platform edukasi hukum kejahatan digital dan perlindungan anak di Indonesia.</p>
+      <p class="footer-disclaimer">⚠️ Website ini bersifat edukatif dan bukan legal advice.</p>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Justice in Motion. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT BUTTON -->
+<a href="#resources" class="float-help" title="Butuh Bantuan?">
+  <i class="fas fa-circle-exclamation"></i>
+</a>
 
 <script src="script.js"></script>
-
 </body>
 </html>
